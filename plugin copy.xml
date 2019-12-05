@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.nitgensdk" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>Sam</name>
+<js-module name="Sam" src="www/Sam.js"><clobbers target="cordova.plugins.Sam" />
+</js-module> 
+
+
+<platform name="android">
+
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="Sam">
+  <param name="android-package" value="com.nitgensdk.Sam" />
+    <framework custom="true" src="src/android/sam.gradle" type="gradleReference" />
+</feature>
+</config-file>
+
+
+<config-file parent="/*" target="AndroidManifest.xml" />
+<source-file src="src/android/Sam.java" target-dir="src/com.nitgensdk/Sam" />
+ 
+    <!-- <framework src="com.carto:carto-mobile-sdk:4.0.0-rc.2" />
+
+    <source-file src="src/android/CDMapView.java" target-dir="src/com/carto/plugin/mobile-sdk" />
+     -->
+</platform>
+
+
+<platform name="ios">
+<config-file parent="/*" target="config.xml">
+<feature name="Sam"><param name="ios-package" value="Sam" />
+</feature></config-file><source-file src="src/ios/Sam.m" />
+</platform>
+</plugin>

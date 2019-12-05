@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-nitgen-sam" version="0.1.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Sam</name>
+    <js-module name="Sam" src="www/Sam.js">
+        <clobbers target="plugins.Sam" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="Sam">
+                <param name="android-package" value="com.nitgensdk.Sam" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/com/nitgensdk/Sam/Sam.java" target-dir="src/com/nitgensdk" />
+        <source-file src="src/android/com/nitgensdk/Sam/SampleDialogFragment.java" target-dir="src/com/nitgensdk" />
+        <source-file src="src/android/com/nitgensdk/Sam/UserDialog.java" target-dir="src/com/nitgensdk" />
+        <source-file src="src/android/com/nitgensdk/Sam/Android_Demo.java" target-dir="src/com/nitgensdk" />
+        <lib-file src="src/android/libs/AndroidNBioBSPJNI.jar" />
+        <source-file src="src/android/libs/libNBioBSP.so" target-dir="src/com/nitgensdk/" />
+        <source-file src="src/android/libs/libNBioBSPJNI.so" target-dir="src/com/nitgensdk/" />
+        <framework src="src/android/sam.gradle" custom="true" type="gradleReference"/>
+        <source-file src="src/android/build-extras.gradle" target-dir="." />
+        <config-file parent="/*" target="AndroidManifest.xml" /> 
+  
+
+
+    </platform>
+</plugin>

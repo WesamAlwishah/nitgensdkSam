@@ -1,0 +1,49 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@WesamAlwishah 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+1
+00WesamAlwishah/nitgensdkSam
+ Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
+Quick setup — if you’ve done this kind of thing before
+or	
+HTTPS
+SSH
+https://github.com/WesamAlwishah/nitgensdkSam.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# nitgensdkSam" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/WesamAlwishah/nitgensdkSam.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin https://github.com/WesamAlwishah/nitgensdkSam.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+ ProTip! Use the URL for this page when adding GitHub as a remote.
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
