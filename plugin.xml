@@ -52,7 +52,7 @@
 	 
 
 
-		<source-file src="src/android/res/values/string.xml" target-dir="res/values" />
+		<source-file src="src/android/res/values/strings.xml" target-dir="res/values" />
 		<source-file src="src/android/res/values/styles.xml" target-dir="res/values" />
 	 
 		<framework src="com.android.support:appcompat-v7:23.0.0" />	 
