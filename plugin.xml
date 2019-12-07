@@ -41,9 +41,9 @@
 		<source-file src="src/android/com/nitgen/SDK/AndroidBSP/UserDialog.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />
 		<source-file src="src/android/com/nitgen/SDK/AndroidBSP/Android_Demo.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />
 	
-		<source-file src="src/android/lib/android/AndroidNBioBSPJNI.jar" target-dir="libs" />
-        <source-file src="src/android/lib/android/armeabi/libNBioBSP.so" target-dir="libs/armeabi" />
-		<source-file src="src/android/lib/android/armeabi/libNBioBSPJNI.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/AndroidNBioBSPJNI.jar" target-dir="libs" />
+        <source-file src="src/android/lib/armeabi/libNBioBSP.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libNBioBSPJNI.so" target-dir="libs/armeabi" />
 	 
 
 		<source-file src="src/android/res/layout/activity_android__demo.xml" target-dir="res/layout" />
