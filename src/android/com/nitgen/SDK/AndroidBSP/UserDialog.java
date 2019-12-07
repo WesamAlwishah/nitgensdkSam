@@ -3,7 +3,7 @@
  * This software is the proprietary information of UNIONCOMMUNITY
  *
  */
-package com.nitgensdk;
+package com.nitgen.SDK.AndroidBSP;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -15,7 +15,7 @@ import android.text.InputType;
 import android.widget.EditText;
 
 /**
- * com.nitgensdk
+ * com.nitgen.SDK.AndroidBSP
  * UserDialog.java
  *
  *@author : Kim Do Hyun ( rkwkgo@unioncomm.co.kr ) 

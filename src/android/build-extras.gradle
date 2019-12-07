@@ -1,7 +1,0 @@
-android {
-    packagingOptions {
-        pickFirst 'app/src/main/jniLibs/libNBioBSP.so'
-        pickFirst 'app/src/main/jniLibs/libNBioBSPJNI.so'
-    }
-    
-}

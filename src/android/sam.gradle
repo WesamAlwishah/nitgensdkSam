@@ -1,3 +1,0 @@
-dependencies {
-    provided files('libs/AndroidNBioBSPJNI.jar')
-}

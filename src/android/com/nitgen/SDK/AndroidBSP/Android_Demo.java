@@ -3,7 +3,7 @@
  * This software is the proprietary information of UNIONCOMMUNITY
  *
  */
-package com.nitgensdk;
+package com.nitgen.SDK.AndroidBSP;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -22,19 +22,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.nitgensdk.NBioBSPJNI.CAPTURED_DATA;
-import com.nitgensdk.NBioBSPJNI.CAPTURE_CALLBACK;
-import com.nitgensdk.NBioBSPJNI.CAPTURE_QUALITY_INFO;
-import com.nitgensdk.NBioBSPJNI.INIT_INFO_0;
-import com.nitgensdk.NBioBSPJNI.NFIQInfo;
-import com.nitgensdk.NBioBSPJNI.IndexSearch.FP_INFO;
-import com.nitgensdk.NBioBSPJNI.IndexSearch.SAMPLE_INFO;
-import com.nitgensdk.SampleDialogFragment.SampleDialogListener;
-import com.nitgensdk.UserDialog.UserDialogListener;
+import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.CAPTURED_DATA;
+import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.CAPTURE_CALLBACK;
+import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.CAPTURE_QUALITY_INFO;
+import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.INIT_INFO_0;
+import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.NFIQInfo;
+import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.IndexSearch.FP_INFO;
+import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.IndexSearch.SAMPLE_INFO;
+import com.nitgen.SDK.AndroidBSP.SampleDialogFragment.SampleDialogListener;
+import com.nitgen.SDK.AndroidBSP.UserDialog.UserDialogListener;
 
 /**
  * Demo App
- * com.nitgensdk
+ * com.nitgen.SDK.AndroidBSP
  * Android_Demo.java
  *
  *@author : KimDoHyun ( rkwkgo@unioncomm.co.kr ) 
@@ -277,7 +277,7 @@ public class Android_Demo extends Activity implements SampleDialogListener, User
     
     
 	/* (non-Javadoc)
-	 * @see com.nitgensdk.SampleDialogFragment.SampleDialogListener#onClickStopBtn(android.app.DialogFragment)
+	 * @see com.nitgen.SDK.AndroidBSP.SampleDialogFragment.SampleDialogListener#onClickStopBtn(android.app.DialogFragment)
 	 */
 	public void onClickStopBtn(DialogFragment dialogFragment) {
 
@@ -364,7 +364,8 @@ public class Android_Demo extends Activity implements SampleDialogListener, User
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
-					 	e.printStackTrace();
+						// TODO Auto-generated catch block
+						e.printStackTrace();
 					}
 
 				}
@@ -961,7 +962,7 @@ public class Android_Demo extends Activity implements SampleDialogListener, User
 	}
 
 	/* (non-Javadoc)
-	 * @see com.nitgensdk.UserDialog.UserDialogListener#onClickPositiveBtn(android.app.DialogFragment, java.lang.String)
+	 * @see com.nitgen.SDK.AndroidBSP.UserDialog.UserDialogListener#onClickPositiveBtn(android.app.DialogFragment, java.lang.String)
 	 */
 	public void onClickPositiveBtn(DialogFragment dialogFragment, String id) {
 

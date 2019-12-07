@@ -1,5 +1,9 @@
-package com.nitgensdk;
-
+/*
+ * COPYRIGHT(c) UNIONCOMMUNITY 2013
+ * This software is the proprietary information of UNIONCOMMUNITY
+ *
+ */
+package com.nitgen.SDK.AndroidBSP;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -35,7 +39,8 @@ public class SampleDialogFragment extends DialogFragment{
 	SampleDialogListener sampleDialogListener;
 	
 	@Override
-	public void onAttach(Activity activity) { 
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
 		super.onAttach(activity);
 		try{			
 			sampleDialogListener = (SampleDialogListener)activity;

@@ -1,29 +1,61 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-nitgen-sam" version="0.1.0"
+<plugin id="cordova.plugin.nitgen.sam" version="0.1.0"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Sam</name>
     <js-module name="Sam" src="www/Sam.js">
         <clobbers target="plugins.Sam" />
     </js-module>
-    <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
+
+    	<platform name="android">
+	      <config-file parent="/*" target="res/xml/config.xml">
             <feature name="Sam">
-                <param name="android-package" value="com.nitgensdk.Sam" />
+                <param name="android-package" value="cordova.plugin.nitgen.sam.Sam" />
             </feature>
         </config-file>
-        <source-file src="src/android/com/nitgensdk/Sam/Sam.java" target-dir="src/com/nitgensdk" />
-        <source-file src="src/android/com/nitgensdk/Sam/SampleDialogFragment.java" target-dir="src/com/nitgensdk" />
-        <source-file src="src/android/com/nitgensdk/Sam/UserDialog.java" target-dir="src/com/nitgensdk" />
-        <source-file src="src/android/com/nitgensdk/Sam/Android_Demo.java" target-dir="src/com/nitgensdk" />
-        <lib-file src="src/android/libs/AndroidNBioBSPJNI.jar" />
-        <source-file src="src/android/libs/libNBioBSP.so" target-dir="src/com/nitgensdk/" />
-        <source-file src="src/android/libs/libNBioBSPJNI.so" target-dir="src/com/nitgensdk/" />
-        <framework src="src/android/sam.gradle" custom="true" type="gradleReference"/>
-        <source-file src="src/android/build-extras.gradle" target-dir="." />
+        
         <config-file parent="/*" target="AndroidManifest.xml" /> 
-  
+		
+		<config-file parent="/manifest/application" target="AndroidManifest.xml">
+			   <activity
+            android:name="Android_Demo"
+            android:label="@string/title_activity_android__demo" 
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+                         <intent-filter>
+               <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+     		<meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter_nitgen" />
+                
+				</activity>
+		</config-file>
+		
+		<source-file src="src/android/Sam.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />
+		<source-file src="src/android/com/nitgen/SDK/AndroidBSP/SampleDialogFragment.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />
+		<source-file src="src/android/com/nitgen/SDK/AndroidBSP/UserDialog.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />
+		<source-file src="src/android/com/nitgen/SDK/AndroidBSP/Android_Demo.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />
+	
+		<source-file src="src/android/lib/android/AndroidNBioBSPJNI.jar" target-dir="libs" />
+        <source-file src="src/android/lib/android/armeabi/libNBioBSP.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/android/armeabi/libNBioBSPJNI.so" target-dir="libs/armeabi" />
+	 
+
+		<source-file src="src/android/res/layout/activity_android__demo.xml" target-dir="res/layout" />
+		<source-file src="src/android/res/menu/activity_android__demo.xml" target-dir="res/menu" />
+		<source-file src="src/android/res/xml/device_filter_nitgen.xml" target-dir="res/xml" />
+	 
 
 
-    </platform>
+		<source-file src="src/android/res/values/string.xml" target-dir="res/values" />
+		<source-file src="src/android/res/values/styles.xml" target-dir="res/values" />
+	 
+		<framework src="com.android.support:appcompat-v7:23.0.0" />	 
+	</platform>
+    
 </plugin>
