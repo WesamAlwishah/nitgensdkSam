@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-nitgen-sam",
+  "name": "cordova.plugin.nitgen.sam",
   "version": "0.1.0",
   "description": "Wesam",
   "cordova": {
-    "id": "cordova-plugin-nitgen-sam",
+    "id": "cordova.plugin.nitgen.sam",
     "platforms": [
       "android",
       "ios"
