@@ -16,26 +16,7 @@
         
         <config-file parent="/*" target="AndroidManifest.xml" /> 
 		
-		<config-file parent="/manifest/application" target="AndroidManifest.xml">
-			   <activity
-            android:name="Android_Demo"
-            android:label="@string/title_activity_android__demo" 
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-                         <intent-filter>
-               <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
-            </intent-filter>
-     		<meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
-                android:resource="@xml/device_filter_nitgen" />
-                
-				</activity>
-		</config-file>
-		
+ 
 		<source-file src="src/android/Sam.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />
 		<source-file src="src/android/com/nitgen/SDK/AndroidBSP/SampleDialogFragment.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />
 		<source-file src="src/android/com/nitgen/SDK/AndroidBSP/UserDialog.java" target-dir="src/com/nitgen/SDK/AndroidBSP" />

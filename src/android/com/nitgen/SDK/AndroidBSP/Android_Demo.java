@@ -7,6 +7,7 @@ package com.nitgen.SDK.AndroidBSP;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import org.apache.cordova.*;
 
 import android.app.Activity;
 import android.app.DialogFragment;
@@ -80,7 +81,7 @@ public class Android_Demo extends Activity implements SampleDialogListener, User
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        initView();
+        // initView();
         initData();
         
     }
@@ -90,33 +91,33 @@ public class Android_Demo extends Activity implements SampleDialogListener, User
      */
     public void initView(){
     
-    	setContentView(R.layout.activity_android__demo);
+    	// setContentView(R.layout.activity_android__demo);
     	
-    	img_fp_src = (ImageView)findViewById(R.id.img_fp_src);
-    	img_fp_src.setBackgroundColor(Color.argb(255, 255, 255, 255));
-    	img_fp_dst = (ImageView)findViewById(R.id.img_fp_dst);
-    	img_fp_dst.setBackgroundColor(Color.argb(255, 255, 255, 255));
+    	// img_fp_src = (ImageView)findViewById(R.id.img_fp_src);
+    	// img_fp_src.setBackgroundColor(Color.argb(255, 255, 255, 255));
+    	// img_fp_dst = (ImageView)findViewById(R.id.img_fp_dst);
+    	// img_fp_dst.setBackgroundColor(Color.argb(255, 255, 255, 255));
     	    	
-    	tvInfo = (TextView) findViewById(R.id.textInfo);
-    	tvVer = (TextView) findViewById(R.id.textVer);
-    	tvDevice = (TextView) findViewById(R.id.textDevice);
+    	// tvInfo = (TextView) findViewById(R.id.textInfo);
+    	// tvVer = (TextView) findViewById(R.id.textVer);
+    	// tvDevice = (TextView) findViewById(R.id.textDevice);
     	
-    	editBrightness = (EditText)findViewById(R.id.editBrightness);
+    	// editBrightness = (EditText)findViewById(R.id.editBrightness);
     	
-        btnCapture1 = (Button) findViewById(R.id.btnCapture1);
-    	btnCapture1.setEnabled(false);
-    	btnAutoOn1 = (Button) findViewById(R.id.btnAutoOn1);
-    	btnAutoOn1.setEnabled(false);
-    	btnCapture2 = (Button) findViewById(R.id.btnCapture2);
-    	btnCapture2.setEnabled(false);
-    	btnAutoOn2 = (Button) findViewById(R.id.btnAutoOn2);
-    	btnAutoOn2.setEnabled(false);
-    	btnVerifyTemplate = (Button) findViewById(R.id.btnVerifyIso);
-    	btnVerifyTemplate.setEnabled(false);
-    	btnVerifyRaw = (Button) findViewById(R.id.btnVerifyRaw);
-    	btnVerifyRaw.setEnabled(false);
-    	btnSetBrightness = (Button) findViewById(R.id.btnSetBrightness);
-    	btnSetBrightness.setEnabled(false);
+        // btnCapture1 = (Button) findViewById(R.id.btnCapture1);
+    	// btnCapture1.setEnabled(false);
+    	// btnAutoOn1 = (Button) findViewById(R.id.btnAutoOn1);
+    	// btnAutoOn1.setEnabled(false);
+    	// btnCapture2 = (Button) findViewById(R.id.btnCapture2);
+    	// btnCapture2.setEnabled(false);
+    	// btnAutoOn2 = (Button) findViewById(R.id.btnAutoOn2);
+    	// btnAutoOn2.setEnabled(false);
+    	// btnVerifyTemplate = (Button) findViewById(R.id.btnVerifyIso);
+    	// btnVerifyTemplate.setEnabled(false);
+    	// btnVerifyRaw = (Button) findViewById(R.id.btnVerifyRaw);
+    	// btnVerifyRaw.setEnabled(false);
+    	// btnSetBrightness = (Button) findViewById(R.id.btnSetBrightness);
+    	// btnSetBrightness.setEnabled(false);
     
     }
 
@@ -845,8 +846,8 @@ public class Android_Demo extends Activity implements SampleDialogListener, User
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-    	MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.activity_android__demo, menu);
+    	// MenuInflater inflater = getMenuInflater();
+		// inflater.inflate(R.menu.activity_android__demo, menu);
     	
     	return true;
     }
@@ -857,23 +858,23 @@ public class Android_Demo extends Activity implements SampleDialogListener, User
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-    	switch(item.getItemId()){
-    	case R.id.menu_add_fir:
+    	// switch(item.getItemId()){
+    	// case R.id.menu_add_fir:
     		
-    		userDialog.show(getFragmentManager(), "add_fir");		    	
+    	// 	userDialog.show(getFragmentManager(), "add_fir");		    	
     		
     		
-    		return true;
-    	case R.id.menu_identify:
+    	// 	return true;
+    	// case R.id.menu_identify:
     		
-    		OnIdentify(5000);
+    	// 	OnIdentify(5000);
     		
-    		return true;
-    	case R.id.menu_remove:
-    		userDialog.show(getFragmentManager(), "remove");		    	
+    	// 	return true;
+    	// case R.id.menu_remove:
+    	// 	userDialog.show(getFragmentManager(), "remove");		    	
     		
-    		return true;
-    	}
+    	// 	return true;
+    	// }
     	
     	return false;
     }
