@@ -34,7 +34,8 @@
 
 		<source-file src="src/android/res/values/styles.xml" target-dir="res/values" />
 	 
-		<framework src="com.android.support:appcompat-v7:23.0.0" />	 
+		<framework src="com.android.support:appcompat-v7:23.0.0" />	
+		<framework src="org.greenrobot:eventbus:3.1.1" />
 	</platform>
     
 </plugin>
