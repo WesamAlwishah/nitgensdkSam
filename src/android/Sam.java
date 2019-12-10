@@ -1,12 +1,23 @@
 package cordova.plugin.nitgen.sam;
 
-
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.util.Log;
+import android.widget.Toast;
+import com.nitgen.sam.R;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+ 
+import com.nitgen.SDK.AndroidBSP.Android_Demo;
+ 
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.PluginResult;
 /**
  * This class echoes a string called from JavaScript.
  */
@@ -41,21 +52,18 @@ public class Sam extends CordovaPlugin {
         }
     }
 
-    private void substract(JSONArray args, CallbackContext callbackContext) {
-        if (args != null  ) {
-            try{
-                int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
-                int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-                callbackContext.success(""+ (p1 - p2));
+       private void substract(JSONArray args, CallbackContext callbackContext) {
+        Context context = cordova.getActivity().getApplicationContext();
 
-            }catch(Exception ex)
-            {
-                callbackContext.error("some thing error" + ex);
+        Intent intent = new Intent(context, Android_Demo.class);
+        intent.putExtra("token", args.getString(0));
+        intent.putExtra("host", args.getString(1));
+        intent.putExtra("displayName", args.getString(2));
+        intent.putExtra("resourceId", args.getString(3));
+        intent.putExtra("hideConfig", true);
+        intent.putExtra("autoJoin", true);
 
-            }
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
-        }
+        this.cordova.getActivity().startActivity(intent);
     }
     
     // private void startTrip(String driverID, ArrayList<String> taskIDs, final CallbackContext callbackContext) {

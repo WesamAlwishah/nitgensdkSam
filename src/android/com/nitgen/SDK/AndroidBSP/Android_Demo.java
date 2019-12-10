@@ -22,6 +22,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.nitgen.sam.R;
 
 import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.CAPTURED_DATA;
 import com.nitgen.SDK.AndroidBSP.NBioBSPJNI.CAPTURE_CALLBACK;
